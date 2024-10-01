@@ -1,7 +1,8 @@
 import React from 'react'
 import { View } from 'react-native'
-import LittleLemonHeader from './components/LittleLemonHeader'
-import LittleLemonFooter from './components/LittleLemonFooter'
+import LittleLemonHeader from './components/LittleLemonHeader.tsx'
+import LittleLemonFooter from './components/LittleLemonFooter.tsx'
+import LittleLemonContent from './components/LittleLemonContent.tsx'
 
 type Props = {}
 
@@ -13,6 +14,7 @@ const App = (props: Props) => {
       backgroundColor: "#4a5f58"
     }}>
       <LittleLemonHeader />
+      <LittleLemonContent />
       <LittleLemonFooter />
     </View>
   )
