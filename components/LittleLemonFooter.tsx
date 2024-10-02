@@ -15,7 +15,7 @@ const footerStyle = StyleSheet.create({
     bgStyle: {
         position: "absolute",
         bottom: 0,
-        backgroundColor: "#f3d032",
+        backgroundColor: "#EE9972",
         width: "100%",
         height: 30,
         display: "flex",

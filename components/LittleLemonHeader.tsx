@@ -14,7 +14,7 @@ export default LittleLemonHeader
 
 const headerStyle = StyleSheet.create({
     bgStyle: {
-        backgroundColor: "#f3d032",
+        backgroundColor: "#EE9972",
         width: "100%",
         height: "7%",
         display: "flex",

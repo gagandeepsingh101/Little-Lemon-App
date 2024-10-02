@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import LittleLemonHeader from './components/LittleLemonHeader.tsx'
 import LittleLemonFooter from './components/LittleLemonFooter.tsx'
 import LittleLemonContent from './components/LittleLemonContent.tsx'
@@ -8,11 +8,7 @@ type Props = {}
 
 const App = (props: Props) => {
   return (
-    <View style={{
-      width: "100%",
-      height: "100%",
-      backgroundColor: "#4a5f58"
-    }}>
+    <View style={mainStyle.mainContainerStyle}>
       <LittleLemonHeader />
       <LittleLemonContent />
       <LittleLemonFooter />
@@ -21,3 +17,11 @@ const App = (props: Props) => {
 }
 
 export default App
+
+const mainStyle = StyleSheet.create({
+  mainContainerStyle: {
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#333333"
+  }
+})
