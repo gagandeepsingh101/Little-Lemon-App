@@ -4,8 +4,8 @@ import LittleLemonHeader from './components/LittleLemonHeader.tsx'
 import LittleLemonFooter from './components/LittleLemonFooter.tsx'
 // import RenderProducts from './components/RenderProducts.tsx'
 // import RenderMenuList from './components/RenderMenuList.tsx'
-// import LittleLemonWelcome from './components/LittleLemonWelcome.tsx'
-import LittleLemonLoginPage from './components/LittleLemonLoginPage.tsx'
+// import LittleLemonLoginPage from './components/LittleLemonLoginPage.tsx'
+import LittleLemonWelcome from './components/LittleLemonWelcome.tsx'
 
 type Props = {}
 
@@ -15,8 +15,8 @@ const App = (props: Props) => {
       <LittleLemonHeader />
       {/* <RenderProducts /> */}
       {/* <RenderMenuList /> */}
-      {/* <LittleLemonWelcome /> */}
-      <LittleLemonLoginPage />
+      <LittleLemonWelcome />
+      {/* <LittleLemonLoginPage /> */}
       <LittleLemonFooter />
     </View>
   )
