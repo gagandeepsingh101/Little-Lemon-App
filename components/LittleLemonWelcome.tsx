@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
-import { Image, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
-
+import React, { useState } from 'react';
+import { Image, StyleSheet, Text, useColorScheme, View } from 'react-native';
 type Props = {}
 
 const LittleLemonWelcome = (props: Props) => {
     const [feedback, feedbackChange] = useState<string>();
+    const colorScheme = useColorScheme();
     return (
-        <View style={contentStyle.container}>
+        <View style={{
+            backgroundColor: colorScheme === "dark" ? "#333333" : "#ffffff",
+            ...contentStyle.container
+        }}>
             <View style={{
                 display: "flex",
                 flexDirection: "row",
@@ -23,12 +26,18 @@ const LittleLemonWelcome = (props: Props) => {
                         height: 100
                     }} />
                 <Text
-                    style={contentStyle.headingStyle}>
+                    style={{
+                        color: colorScheme !== "dark" ? "#333333" : "#fffff",
+                        ...contentStyle.headingStyle
+                    }}>
                     Little Lemon
                 </Text>
             </View>
             <Text
-                style={contentStyle.titleStyle}>
+                style={{
+                    color: colorScheme !== "dark" ? "#333333" : "#fffff",
+                    ...contentStyle.titleStyle
+                }}>
                 Little Lemon is a charming neighborhood bistro that serves simple food
                 and classic cocktails in a lively but casual environment. We would love
                 to hear more about your experience with us!
@@ -42,7 +51,7 @@ export default LittleLemonWelcome
 
 const contentStyle = StyleSheet.create({
     container: {
-        flex: 0.90,
+        flex: 1,
         display: "flex",
         alignItems: "center",
     },
@@ -57,14 +66,12 @@ const contentStyle = StyleSheet.create({
         fontSize: 38,
         padding: 20,
         marginVertical: 8,
-        color: '#EDEFEE',
         textAlign: 'center',
     },
     titleStyle: {
         fontSize: 28,
         padding: 20,
         marginVertical: 8,
-        color: '#EDEFEE',
         textAlign: 'center',
     }
 })
